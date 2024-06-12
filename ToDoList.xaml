@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.ToDoList"
+             Title="ToDoList">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="add.png" Clicked="AddButton_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Label Text="Yapılacaklar" FontSize="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <StackLayout x:Name="YapilacaklarLayout" IsVisible="False">
+            <Entry Placeholder="Başlık" x:Name="BaslikEntry" />
+            <Entry Placeholder="Yapılacak" x:Name="YapilacakEntry" />
+            <DatePicker x:Name="TarihPicker" />
+            <TimePicker x:Name="SaatPicker" />
+            <Button Text="Kaydet" Clicked="KaydetButton_Clicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
